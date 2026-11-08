@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آوان | فروشگاه آنلاین</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">آوان<span>.</span></a>
+    <nav class="main-nav">
+      <a href="#home">خانه</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+    <button class="cart-button" id="cart-toggle" aria-label="باز کردن سبد خرید">
+      <span class="cart-icon">🛍</span> سبد خرید <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">NEW COLLECTION · 2026</p>
+        <h1>انتخاب‌های خاص،<br><span>برای روزهای خاص تو.</span></h1>
+        <p>محصولات محبوبت را با چند کلیک پیدا کن؛ ساده، سریع و لذت‌بخش.</p>
+        <a class="primary-button" href="#products">همین حالا خرید کن <span>←</span></a>
+        <div class="hero-note"><span class="note-dot"></span> مجموعه‌ای از انتخاب‌های دوست‌داشتنی</div>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=85" alt="فضای شیک یک فروشگاه">
+        <div class="hero-sticker">YOUR<br>STYLE<br><b>✦</b></div>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categories">
+      <div class="section-heading">
+        <div><p class="eyebrow">EXPLORE</p><h2>دسته‌بندی‌های محبوب</h2></div>
+        <p class="section-subtitle">برای شروع، یک دسته را انتخاب کن.</p>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" href="#products" data-category="electronics">
+          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=700&q=80" alt="وسایل الکترونیکی">
+          <span>تکنولوژی <b>↗</b></span>
+        </a>
+        <a class="category-card" href="#products" data-category="jewelery">
+          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80" alt="زیورآلات">
+          <span>زیورآلات <b>↗</b></span>
+        </a>
+        <a class="category-card" href="#products" data-category="men's clothing">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="پوشاک">
+          <span>استایل و پوشاک <b>↗</b></span>
+        </a>
+        <a class="category-card" href="#products" data-category="women's clothing">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="مد و لباس">
+          <span>مد روز <b>↗</b></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading products-heading">
+        <div><p class="eyebrow">HANDPICKED FOR YOU</p><h2>محصولات منتخب</h2></div>
+        <input id="search-input" type="search" placeholder="نام محصول را جست‌وجو کن..." aria-label="جست‌وجوی محصول">
+      </div>
+      <div class="filter-row" id="filter-row">
+        <button class="filter-chip active" data-filter="all">همه محصولات</button>
+        <button class="filter-chip" data-filter="electronics">تکنولوژی</button>
+        <button class="filter-chip" data-filter="jewelery">زیورآلات</button>
+        <button class="filter-chip" data-filter="men's clothing">پوشاک مردانه</button>
+        <button class="filter-chip" data-filter="women's clothing">پوشاک زنانه</button>
+      </div>
+      <p id="status-message" class="status-message" aria-live="polite"></p>
+      <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <section class="promo-banner">
+      <div>
+        <p class="eyebrow">A LITTLE TREAT FOR YOU</p>
+        <h2>خرید خوب، حس خوب.</h2>
+        <p>چیزهایی را انتخاب کن که هر روز لبخند به همراه می‌آورند.</p>
+      </div>
+      <div class="promo-symbol">✳</div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-icon">✦</div>
+      <p class="eyebrow">ABOUT AVAN</p>
+      <h2>تجربه‌ای ساده برای انتخاب‌های بهتر</h2>
+      <p>در آوان، پیدا کردن محصول مورد علاقه‌ات باید آسان و دل‌نشین باشد. ما اینجا هستیم تا تجربه خرید آنلاین تو را ساده‌تر کنیم.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="logo footer-logo" href="#home">آوان<span>.</span></a>
+    <p>© ۲۰۲۶ آوان — تمامی حقوق محفوظ است.</p>
+    <a href="mailto:hello@example.com">ارتباط با ما</a>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="سبد خرید">
+    <div class="cart-header">
+      <div><p class="eyebrow">YOUR BAG</p><h2>سبد خرید</h2></div>
+      <button id="cart-close" class="icon-button" aria-label="بستن">×</button>
+    </div>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">سبد خریدت هنوز خالی است.</p></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>مجموع سفارش</span><strong id="cart-total">۰ افغانی</strong></div>
+      <button id="checkout-button" class="primary-button checkout-button">ادامه و ثبت سفارش</button>
+      <p id="checkout-message" class="checkout-message" aria-live="polite"></p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
